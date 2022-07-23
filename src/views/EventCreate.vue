@@ -95,9 +95,9 @@ export default {
         id: uuidv4(),
         organizer: this.$store.state.user
       }
-			EventService.postEvent(event)
+			EventService.postEvent(this.event)
 		  .then(() => {
-		    this.$store.commit('ADD_EVENT', event)
+		    this.$store.commit('ADD_EVENT',this.event)
 	    })
 	    .catch(error => {
 		    console.log(error)
